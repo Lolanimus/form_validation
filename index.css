@@ -1,0 +1,84 @@
+div,
+form {
+    border: 1px solid black;
+}
+
+@font-face {
+    font-family: "logoFont";
+    src:
+        url('./fonts/bodonimoda-variablefont_opszwght-webfont.woff2') format('woff2'),
+        url('./fonts/bodonimoda-variablefont_opszwght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "formFont";
+    src: 
+        url('./fonts/sfprodisplayregular-webfont.woff2') format('woff2'),
+        url('./fonts/sfprodisplayregular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.mainDiv {
+    display: flex;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.mainDiv > .backImgDiv {
+    flex-basis: 40%;
+    background: no-repeat center url('./background.jpg');
+    background-size: cover;
+}
+
+.mainDiv > .contentDiv {
+    flex-basis: 60%;
+}
+
+.mainDiv > .backImgDiv,
+.mainDiv > .contentDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.backImgDiv > .logoDiv {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.logoDiv > img {
+    width: 10rem;
+    height: 11rem;
+}
+
+.logoDiv > p {
+    font: 1rem 'logoFont';
+    color: white; 
+    font-size: 8rem; 
+    margin: 0;
+    margin-top: 15px;  
+}
+
+.contentDiv > .formDiv {
+    display: flex;
+    align-items: center;
+    height: 60vh;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.formDiv > form {
+    width: 100%;
+    height: 25vh;
+}
